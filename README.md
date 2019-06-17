@@ -1,5 +1,5 @@
 # The MiCA-Framework
-A Framework for the Microservice-based Simulation of Cyber Attacks. Created as [my](https://github.com/zinklandi) Master-Thesis at the [Laboratory for Information Security](https://seclab.othr.de) at the [OTH Regensburg](https://oth-regensburg.de).
+A Framework for the Microservice-based Simulation of Cyber Attacks. Created as [my](https://github.com/zinklandi) Master-Thesis at the [Laboratory for Information Security](https://seclab.othr.de) at the [OTH Regensburg](https://www.oth-regensburg.de).
 
 <div stlye="width:100%;float:left;">
 <img src="./images/MiCA_Logo.png" style="float: left; height: 100px; margin-right: 20px; z-index: 1;" /> 
