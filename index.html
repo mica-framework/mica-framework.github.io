@@ -1,13 +1,89 @@
 
     <html>
       <head>
-        <title>The MiCA-Framework</title>
+        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
       </head>
       <body>
         <div id='content'>
     <h1 id="the-mica-framework">The MiCA-Framework</h1>
-<h2 id="a-microservice-based-simulation-framework-for-cyber-attacks">A Microservice-based Simulation Framework for Cyber Attacks</h2>
+<p>A Framework for the Microservice-based Simulation of Cyber Attacks. Created as <a href="https://github.com/zinklandi">my</a> Master-Thesis at the <a href="https://seclab.othr.de">Laboratory for Information Security</a> at the <a href="https://oth-regensburg.de">OTH Regensburg</a>.</p>
+<div stlye="width:100%;float:left;">
+<img src="./images/MiCA_Logo.png" style="float: left; height: 100px; margin-right: 20px; z-index: 1;" /> 
+<img src="./images/OTH_Logo_SEC.png" style="margin: 5px 10px; height: 90px;" />
+</div>
+<p><a href="https://github.com/mica-framework">--> Go to GitHub to see the project</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of the MiCA-Framework is to provide a simple framework and an easy to implement infrastructure to be able to simulate cyber attacks within research projects. Therefore custom cyber attacks can be developed and simulate through the MiCA-Framework on multiple victim-clients as requested.</p>
+<p>This frameworks purpose is to support IT-Security researchers on simulating and analyzing cyber attacks. Therefore we do not provide custom cyber attacks! It shall not be abused through third parties by providing tools for potential malicious hackers.</p>
+<p>Using Docker provides the ability to run and distribute attacks on multiple devices, which have Docker installed. This also enables a detailed analysis of the implemented cyber attacks, through providing the same environment on each victim thanks to the used docker containers.</p>
+<p>If you like to use this framework feel free to use it within your researches. If you'd like to reference this project, please use the following BibTex-Reference:</p>
+<pre><code>@misc{
+  author = {Zinkl, Andreas},
+  title = {The MiCA-Framework},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub Repository},
+  howpublished = {\url{https://github.com/mica-framework}}
+}
+</code></pre>
+<h2 id="requirements">Requirements</h2>
+<p>To be able to run this framework on your local environment, the following requirements need to be fulfilled:</p>
+<ul>
+<li>Docker Client or Docker Toolbox (Installers can be found <a href="https://docs.docker.com/install/">here</a>)</li>
+<li>Python 3.5 (or newer)</li>
+</ul>
+<h2 id="integration">Integration</h2>
+<p>Integrating the framework into your research environment requires two steps:</p>
+<ol>
+<li>Installation &amp; Configuration of the MiCA-Server</li>
+<li>Installation of the MiCA-Agents</li>
+</ol>
+<h3 id="mica-server"><strong><em>MiCA-Server</em></strong>:</h3>
+<p>The installation of the <strong>MiCA-Server</strong> can be processed by going through the following steps:</p>
+<ol>
+<li>Clone the repo: <code>git clone git@github.com/mica-framework/server.git</code></li>
+<li>Go to the folder <code>server</code> and edit the following files as need for your system:<ol>
+<li>docker-compose.yml</li>
+<li>config.yml</li></ol></li>
+<li>Finally start the services by running the command <code>docker-compose up --build</code></li>
+</ol>
+<p><strong>Hint:</strong> (<code>--build</code> should be run on the first startup. I'd recommend to use it every time, if<br />
+you changed something on the server)</p>
+<h3 id="mica-cli"><strong><em>MiCA-CLI</em></strong>:</h3>
+<p>You can run the MiCA-CLI by just downloading or cloning the repo and finally running the <code>mica-cli.py</code> file. An exectuable is not available till now (but is in progress!).</p>
+<p><strong>WARNING</strong>: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd do not decode a the text properly. Fixing this, is also in progress!</p>
+<p>Here's a short hint, how the CLI can be executed on your system:</p>
+<pre><code class="bash language-bash"># 1 - Start by creating a virutal environment within the CLI project
+python3 -m venv .env
+
+# 2 - Activate the virutal environment
+. .env/bin/activate     # on unix devices
+. .env/scripts/activate # on windows
+
+# 3 - Now install the dependencies
+pip install -r requirements.txt
+
+# 4 - Run the cli
+python3 mica-cli.py
+</code></pre>
+<h3 id="mica-agent"><strong><em>MiCA-Agent</em></strong>:</h3>
+<p>Running the MiCA-Agent is simple, but currently there's only a working Windows Installer-Version of the Installer-Script. That means, you need to download the binary for linux and execute it manually on your system.<br />
+If you're running windows, then the following command will install the MiCA-Agent on your system and registers the agent-startup within your autostart:</p>
+<pre><code class="bash language-bash">curl https://raw.githubusercontent.com/mica-framework/tools/master/agent-installation/install_mica_agent.sh --output install.sh &amp;&amp; ./install.sh &amp;&amp; rm ./install.sh
+</code></pre>
+<h2 id="contribution--development">Contribution / Development</h2>
+<p>This project was published as Open Source to share the framework with all IT-Security researchers and to create a framework which may be improved through different areas of use. I hope that you like what you get with this framework, but also feel free to create issues about errors, problems or things you like to see.<br />
+If you want to be a part or contribute to this project, just feel free to do it!</p>
+<p>The Project was published through the popular MIT-License, to create the best conditions for all of you to contribute to this project as well as use it within your researches!</p>
+<h2 id="references">References</h2>
+<p>Thanks to all Open Source Developers for sharing their tools and software! I've<br />
+mentioned the used Tools for the creation of this landing page and framework below:</p>
+<ul>
+<li><a href="https://github.com/KrauseFx/markdown-to-html-github-style">Markdown to HTML Tool by <a href="https://github.com/krausefx">@krausefx</a></a></li>
+<li><a href="https://github.com/pwaller/pyfiglet">PyFiglet for the Intro-Page of the CLI by <a href="https://github.com/pwaller">@pwaller</a></a></li>
+<li><a href="https://github.com/CITGuru/PyInquirer">PyInquirer for the CLI-Interaction by <a href="https://github.com/CITguru">@CITguru</a></a></li>
+</ul>
 
         </div>
         <style type='text/css'>body {
