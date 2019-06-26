@@ -45,8 +45,11 @@ The installation of the **MiCA-Server** can be processed by going through the fo
     1. config.yml
 1. Finally start the services by running the command `docker-compose up --build`
 
-**Hint:** (`--build` should be run on the first startup. I'd recommend to use it every time, if
-you changed something on the server)
+**Hints:** 
+- `--build` should be run on the first startup. I'd recommend to use it every time, if
+you changed something on the server
+- Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the following command to run a local instance as a docker container:
+```docker-compose up -f docker-compose.yml -f ./docker/influxdb.yml --build```
 
 ### ***MiCA-CLI***:
 You can run the MiCA-CLI by just downloading or cloning the repo and finally running the `mica-cli.py` file. An exectuable is not available till now (but is in progress!).

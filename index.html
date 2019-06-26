@@ -48,8 +48,13 @@
 <li>config.yml</li></ol></li>
 <li>Finally start the services by running the command <code>docker-compose up --build</code></li>
 </ol>
-<p><strong>Hint:</strong> (<code>--build</code> should be run on the first startup. I'd recommend to use it every time, if<br />
-you changed something on the server)</p>
+<p><strong>Hints:</strong> </p>
+<ul>
+<li><code>--build</code> should be run on the first startup. I'd recommend to use it every time, if<br />
+you changed something on the server</li>
+<li>Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the following command to run a local instance as a docker container:<br />
+<code>docker-compose up -f docker-compose.yml -f ./docker/influxdb.yml --build</code></li>
+</ul>
 <h3 id="mica-cli"><strong><em>MiCA-CLI</em></strong>:</h3>
 <p>You can run the MiCA-CLI by just downloading or cloning the repo and finally running the <code>mica-cli.py</code> file. An exectuable is not available till now (but is in progress!).</p>
 <p><strong>WARNING</strong>: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd do not decode a the text properly. Fixing this, is also in progress!</p>
