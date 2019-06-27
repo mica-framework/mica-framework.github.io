@@ -89,6 +89,7 @@ The Project was published through the popular MIT-License, to create the best co
 ## References
 Thanks to all Open Source Developers for sharing their tools and software! I've
 mentioned the used Tools for the creation of this landing page and framework below:
+- <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework by @rapid7</a>
 - <a href="https://github.com/KrauseFx/markdown-to-html-github-style">Markdown to HTML Tool by @krausefx</a>
 - <a href="https://github.com/pwaller/pyfiglet">PyFiglet for the Intro-Page of the CLI by @pwaller</a>
 - <a href="https://github.com/CITGuru/PyInquirer">PyInquirer for the CLI-Interaction by @CITguru</a>
