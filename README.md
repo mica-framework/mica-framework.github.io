@@ -1,8 +1,5 @@
 # The MiCA-Framework
-A Framework for the Microservice-based Simulation of Cyber Attacks. 
-Created as [my](https://github.com/zinklandi) Master-Thesis at the 
-[Laboratory for Information Security](https://seclab.othr.de) at the 
-[OTH Regensburg](https://www.oth-regensburg.de).
+A Framework for the Microservice-based Simulation of Cyber Attacks. Created as [my](https://github.com/zinklandi) Master-Thesis at the [Laboratory for Information Security](https://seclab.othr.de) at the [OTH Regensburg](https://www.oth-regensburg.de).
 
 <div stlye="width:100%;float:left;">
 <img src="./images/MiCA_Logo.png" style="float: left; height: 100px; margin-right: 20px; z-index: 1;" /> 
@@ -12,21 +9,14 @@ Created as [my](https://github.com/zinklandi) Master-Thesis at the
 [Go to GitHub to see the project..](https://github.com/mica-framework)
 
 ## Introduction
-The goal of the MiCA-Framework is to provide a simple framework and an easy way to integrate the framework into
-an existing infrastructure, which allows a simple and fast way of 
-simulating cyber attacks. Therefore custom cyber attacks can be developed and 
-simulated and scaled through the MiCA-Framework on as much victim-clients as needed.
+The goal of the MiCA-Framework is to provide a simple framework and an easy way to integrate the framework into an existing infrastructure, which allows a simple and fast way of simulating cyber attacks. Therefore custom cyber attacks can be developed and simulated and scaled through the MiCA-Framework on as much victim-clients as needed.
 
 **Important!**
-This frameworks purpose is to support IT-Security researchers on simulating and analyzing cyber attacks. Therefore we 
-do not provide any cyber attacks!
+This frameworks purpose is to support IT-Security researchers on simulating and analyzing cyber attacks. Therefore we do not provide any cyber attacks!
 
-Using Docker enables the possibility to run and distribute attacks on multiple devices, which have Docker installed. This 
-also enables a detailed analysis of the implemented cyber attacks, by providing the same environment on each victim, 
-thanks to the used docker containers.
+Using Docker enables the possibility to run and distribute attacks on multiple devices, which have Docker installed. This also enables a detailed analysis of the implemented cyber attacks, by providing the same environment on each victim, thanks to the used docker containers.
 
-If you like to use this framework feel free to use it within your researches. If you'd like to reference this project, 
-please use the following BibTex-Reference:
+If you like to use this framework feel free to use it within your researches. If you'd like to reference this project, please use the following BibTex-Reference:
 ```
 @misc{
   author = {Zinkl, Andreas},
@@ -57,18 +47,14 @@ The installation of the **MiCA-Server** can be processed by going through the fo
 1. Finally start the services by running the command `docker-compose up --build`
 
 **Hints:** 
-- `--build` should be run on the first startup. I'd recommend to use it every time, if
-you changed something on the server
-- Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the 
-following command to run a local instance as a docker container:
+- `--build` should be run on the first startup. I'd recommend to use it every time, if you changed something on the server
+- Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the following command to run a local instance as a docker container:
 ```docker-compose up -f docker-compose.yml -f ./docker/influxdb.yml --build```
 
 ### ***MiCA-CLI***:
-You can run the MiCA-CLI by just downloading or cloning the repo and finally running the `mica-cli.py` file. An 
-exectuable is not available till now (but is in progress!).
+You can run the MiCA-CLI by just downloading or cloning the repo and finally running the `mica-cli.py` file. An executable is not available till now (but is in progress!).
 
-**WARNING**: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd 
-do not decode a the text properly. Fixing this, is also in progress!
+**WARNING**: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd do not decode a the text properly. Fixing this, is also in progress!
 
 Here's a short hint, how the CLI can be executed on your system:
 ```bash
@@ -87,27 +73,19 @@ python3 mica-cli.py
 ```
 
 ### ***MiCA-Agent***:
-Running the MiCA-Agent is simple, but currently there's only a working Windows Installer-Version of the Installer-Script. 
-That means, you need to download the binary for linux and execute it manually on your system.
-If you're running windows, then the following command will install the MiCA-Agent on your system and registers the 
-agent-startup within your autostart:
+Running the MiCA-Agent is simple, but currently there's only a working Windows Installer-Version of the Installer-Script. That means, you need to download the binary for linux and execute it manually on your system. If you're running windows, then the following command will install the MiCA-Agent on your system and registers the agent-startup within your autostart:
 
 ```bash
 curl https://raw.githubusercontent.com/mica-framework/tools/master/agent-installation/install_mica_agent.sh --output install.sh && ./install.sh && rm ./install.sh
 ```
 
 ## Contribution / Development
-This project was published as Open Source to share the framework with all IT-Security researchers and to create a 
-framework which may be improved through different areas of use. I hope that you like what you get with this framework,
-but also feel free to create issues about errors, problems or things you like to see.
-If you want to be a part or contribute to this project, just feel free to do it!
+This project was published as Open Source to share the framework with all IT-Security researchers and to create a framework which may be improved through different areas of use. I hope that you like what you get with this framework, but also feel free to create issues about errors, problems or things you like to see. If you want to be a part or contribute to this project, just feel free to do it!
 
-The Project was published through the popular MIT-License, to create the best conditions for all of you to contribute 
-to this project as well as use it within your researches!
+The Project was published through the popular MIT-License, to create the best conditions for all of you to contribute to this project as well as use it within your researches!
 
 ## References
-Thanks to all Open Source Developers for sharing their tools and software! I've
-mentioned the used Tools for the creation of this landing page and framework below:
+Thanks to all Open Source Developers for sharing their tools and software! I've mentioned the used Tools for the creation of this landing page and framework below:
 - <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework by @rapid7</a>
 - <a href="https://github.com/KrauseFx/markdown-to-html-github-style">Markdown to HTML Tool by @krausefx</a>
 - <a href="https://github.com/pwaller/pyfiglet">PyFiglet for the Intro-Page of the CLI by @pwaller</a>
