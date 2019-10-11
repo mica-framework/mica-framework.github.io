@@ -1,23 +1,34 @@
 
     <html>
       <head>
-        <title></title>
+        <title>MiCA-Framework</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
       </head>
       <body>
         <div id='content'>
     <h1 id="the-mica-framework">The MiCA-Framework</h1>
-<p>A Framework for the Microservice-based Simulation of Cyber Attacks. Created as <a href="https://github.com/zinklandi">my</a> Master-Thesis at the <a href="https://seclab.othr.de">Laboratory for Information Security</a> at the <a href="https://www.oth-regensburg.de">OTH Regensburg</a>.</p>
+<p>A Framework for the Microservice-based Simulation of Cyber Attacks. <br />
+Created as <a href="https://github.com/zinklandi">my</a> Master-Thesis at the <br />
+<a href="https://seclab.othr.de">Laboratory for Information Security</a> at the <br />
+<a href="https://www.oth-regensburg.de">OTH Regensburg</a>.</p>
 <div stlye="width:100%;float:left;">
 <img src="./images/MiCA_Logo.png" style="float: left; height: 100px; margin-right: 20px; z-index: 1;" /> 
 <img src="./images/OTH_Logo_SEC.png" style="margin: 5px 10px; height: 90px;" />
 </div>
-<p><a href="https://github.com/mica-framework">--> Go to GitHub to see the project</a></p>
+<p><a href="https://github.com/mica-framework">Go to GitHub to see the project..</a></p>
 <h2 id="introduction">Introduction</h2>
-<p>The goal of the MiCA-Framework is to provide a simple framework and an easy to implement infrastructure to be able to simulate cyber attacks within research projects. Therefore custom cyber attacks can be developed and simulate through the MiCA-Framework on multiple victim-clients as requested.</p>
-<p>This frameworks purpose is to support IT-Security researchers on simulating and analyzing cyber attacks. Therefore we do not provide custom cyber attacks! It shall not be abused through third parties by providing tools for potential malicious hackers.</p>
-<p>Using Docker provides the ability to run and distribute attacks on multiple devices, which have Docker installed. This also enables a detailed analysis of the implemented cyber attacks, through providing the same environment on each victim thanks to the used docker containers.</p>
-<p>If you like to use this framework feel free to use it within your researches. If you'd like to reference this project, please use the following BibTex-Reference:</p>
+<p>The goal of the MiCA-Framework is to provide a simple framework and an easy way to integrate the framework into<br />
+an existing infrastructure, which allows a simple and fast way of <br />
+simulating cyber attacks. Therefore custom cyber attacks can be developed and <br />
+simulated and scaled through the MiCA-Framework on as much victim-clients as needed.</p>
+<p><strong>Important!</strong><br />
+This frameworks purpose is to support IT-Security researchers on simulating and analyzing cyber attacks. Therefore we <br />
+do not provide any cyber attacks!</p>
+<p>Using Docker enables the possibility to run and distribute attacks on multiple devices, which have Docker installed. This <br />
+also enables a detailed analysis of the implemented cyber attacks, by providing the same environment on each victim, <br />
+thanks to the used docker containers.</p>
+<p>If you like to use this framework feel free to use it within your researches. If you'd like to reference this project, <br />
+please use the following BibTex-Reference:</p>
 <pre><code>@misc{
   author = {Zinkl, Andreas},
   title = {The MiCA-Framework},
@@ -52,12 +63,15 @@
 <ul>
 <li><code>--build</code> should be run on the first startup. I'd recommend to use it every time, if<br />
 you changed something on the server</li>
-<li>Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the following command to run a local instance as a docker container:<br />
+<li>Currently, only an Influx database is supported for storing the logs. If you do not have an Influx instance, use the <br />
+following command to run a local instance as a docker container:<br />
 <code>docker-compose up -f docker-compose.yml -f ./docker/influxdb.yml --build</code></li>
 </ul>
 <h3 id="mica-cli"><strong><em>MiCA-CLI</em></strong>:</h3>
-<p>You can run the MiCA-CLI by just downloading or cloning the repo and finally running the <code>mica-cli.py</code> file. An exectuable is not available till now (but is in progress!).</p>
-<p><strong>WARNING</strong>: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd do not decode a the text properly. Fixing this, is also in progress!</p>
+<p>You can run the MiCA-CLI by just downloading or cloning the repo and finally running the <code>mica-cli.py</code> file. An <br />
+exectuable is not available till now (but is in progress!).</p>
+<p><strong>WARNING</strong>: The CLI is currently only working properly under unix-terminals. Windows consoles like powershell and cmd <br />
+do not decode a the text properly. Fixing this, is also in progress!</p>
 <p>Here's a short hint, how the CLI can be executed on your system:</p>
 <pre><code class="bash language-bash"># 1 - Start by creating a virutal environment within the CLI project
 python3 -m venv .env
@@ -73,14 +87,19 @@ pip install -r requirements.txt
 python3 mica-cli.py
 </code></pre>
 <h3 id="mica-agent"><strong><em>MiCA-Agent</em></strong>:</h3>
-<p>Running the MiCA-Agent is simple, but currently there's only a working Windows Installer-Version of the Installer-Script. That means, you need to download the binary for linux and execute it manually on your system.<br />
-If you're running windows, then the following command will install the MiCA-Agent on your system and registers the agent-startup within your autostart:</p>
+<p>Running the MiCA-Agent is simple, but currently there's only a working Windows Installer-Version of the Installer-Script. <br />
+That means, you need to download the binary for linux and execute it manually on your system.<br />
+If you're running windows, then the following command will install the MiCA-Agent on your system and registers the <br />
+agent-startup within your autostart:</p>
 <pre><code class="bash language-bash">curl https://raw.githubusercontent.com/mica-framework/tools/master/agent-installation/install_mica_agent.sh --output install.sh &amp;&amp; ./install.sh &amp;&amp; rm ./install.sh
 </code></pre>
 <h2 id="contribution--development">Contribution / Development</h2>
-<p>This project was published as Open Source to share the framework with all IT-Security researchers and to create a framework which may be improved through different areas of use. I hope that you like what you get with this framework, but also feel free to create issues about errors, problems or things you like to see.<br />
+<p>This project was published as Open Source to share the framework with all IT-Security researchers and to create a <br />
+framework which may be improved through different areas of use. I hope that you like what you get with this framework,<br />
+but also feel free to create issues about errors, problems or things you like to see.<br />
 If you want to be a part or contribute to this project, just feel free to do it!</p>
-<p>The Project was published through the popular MIT-License, to create the best conditions for all of you to contribute to this project as well as use it within your researches!</p>
+<p>The Project was published through the popular MIT-License, to create the best conditions for all of you to contribute <br />
+to this project as well as use it within your researches!</p>
 <h2 id="references">References</h2>
 <p>Thanks to all Open Source Developers for sharing their tools and software! I've<br />
 mentioned the used Tools for the creation of this landing page and framework below:</p>
