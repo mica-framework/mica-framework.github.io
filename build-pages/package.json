@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "showdown": "^1.9.0",
+    "showdown": "^1.9.1",
     "mem": ">=4.0.0"
   }
 }
